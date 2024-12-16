@@ -13,7 +13,7 @@ public class Item
     public float percent;
 }
 [CreateAssetMenu(fileName = ("ItemSO"), menuName = "Scriptable Object/ItemSO") ]
-public class itemSO : ScriptableObject
+public class ItemSO : ScriptableObject
 {
     public Item[] items;
 }
