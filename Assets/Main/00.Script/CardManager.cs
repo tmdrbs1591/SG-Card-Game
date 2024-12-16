@@ -25,6 +25,8 @@ public class CardManager : MonoBehaviour
 
     List<Item> itemBuffer;
 
+
+
     public Item PopItem()
     {
         if (itemBuffer.Count == 0)
@@ -59,18 +61,16 @@ public class CardManager : MonoBehaviour
     private void Start()
     {
         SetUpItemBuffer();
+        TurnManager.OnAddCard += AddCard;
     }
+    private void OnDestroy()
+    {
+        TurnManager.OnAddCard -= AddCard;
 
+    }
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.F))
-        {
-            AddCard(true);
-        }
-        if (Input.GetKeyUp(KeyCode.G))
-        {
-            AddCard(false);
-        }
+        
     }
 
     void AddCard(bool isMine)
