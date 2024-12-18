@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a93ea367fdda7489c0a650be0d945f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eTurnMode: 2
+  eTurnMode: 0
   fastMode: 1
   startCardCount: 4
   myTurn: 0
