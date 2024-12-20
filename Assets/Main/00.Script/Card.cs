@@ -39,6 +39,22 @@ public class Card : MonoBehaviour
             healthTMP.text = " ";
         }
     }
+
+    private void OnMouseOver()
+    {
+        if (isFront) { 
+        CardManager.instance.CardMouseOver(this);
+        }
+    }
+
+
+    private void OnMouseExit()
+    {
+        if (isFront)
+        {
+            CardManager.instance.CardMouseExit(this);
+        }
+    }
     public void MoveTransform(PRS prs,bool useDotween,float dotweenTime = 0)
     {
         if (useDotween)
