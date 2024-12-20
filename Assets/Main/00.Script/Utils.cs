@@ -18,4 +18,15 @@ public class PRS
 public class Utils
 {
     public static Quaternion QI => Quaternion.identity;
+
+    public static Vector3 MousePos
+    {
+        get
+        {
+
+            Vector3 result = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            result.z = -10;
+            return result;
+        }
+    }
 }

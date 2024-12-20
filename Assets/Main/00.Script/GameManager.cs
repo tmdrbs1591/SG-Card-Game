@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
             TurnManager.instance.EndTurn();
 
         }
+        if (Input.GetKeyUp(KeyCode.J))
+        {
+            CardManager.instance.TryPutCard(false);
+        }
     }
 
     void StartGame()
