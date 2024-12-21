@@ -83,6 +83,10 @@ public class Entity : MonoBehaviour
         health -= damage;
         healthTMP.text = health.ToString();
 
+
+        CameraShake.instance.Shake();
+
+
         if(health <= 0)
         {
             isDie = true;
