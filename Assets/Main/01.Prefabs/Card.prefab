@@ -649,7 +649,7 @@ MonoBehaviour:
   attackTMP: {fileID: 3930393135537823995}
   healthTMP: {fileID: 7247748120687691276}
   cardFront: {fileID: 1071985618, guid: 0e5dd17221b4ca44b8dfa14c934900a9, type: 3}
-  cardBack: {fileID: 1887926073, guid: 0e5dd17221b4ca44b8dfa14c934900a9, type: 3}
+  cardBack: {fileID: 21300000, guid: 9bb22f920d0b31f468cc19e18ae10c0b, type: 3}
   item:
     name: 
     attack: 0
