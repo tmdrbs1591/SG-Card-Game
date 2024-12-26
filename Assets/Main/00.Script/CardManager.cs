@@ -69,6 +69,7 @@ public class CardManager : MonoBehaviour
     }
     private void Start()
     {
+
         SetUpItemBuffer();
         TurnManager.OnAddCard += AddCard;
         TurnManager.OnTurnStarted += OnTurnStarted;
@@ -102,6 +103,8 @@ public class CardManager : MonoBehaviour
         var card = cardObject.GetComponent<Card>();
         card.SetUp(PopItem(), isMine);
         (isMine ? myCards : otherCards).Add(card);
+
+        AudioManager.instance.PlaySound(transform.position, 0, Random.Range(1f, 1.2f), 1f);
 
         SetOriginOrder(isMine);
         CardAlignment(isMine);

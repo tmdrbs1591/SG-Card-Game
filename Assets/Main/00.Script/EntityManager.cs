@@ -157,7 +157,8 @@ public class EntityManager : MonoBehaviour
         entitiy.isMine = isMine;
         entitiy.SetUp(item);
         EntityAlignment(isMine); 
-        
+        AudioManager.instance.PlaySound(transform.position, 1, Random.Range(1f, 1.2f), 1f);
+
         return true;
     }
 
@@ -204,6 +205,8 @@ public class EntityManager : MonoBehaviour
     {
         attacker.attackable = false;
         attacker.GetComponent<Order>().SetMostFrontOrder(true);
+
+        AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1f, 1.2f), 1f);
 
         DG.Tweening.Sequence sequence = DOTween.Sequence()
             .Append(attacker.transform.DOMove(defender.originPos, 0.4f)).SetEase(Ease.InSine)

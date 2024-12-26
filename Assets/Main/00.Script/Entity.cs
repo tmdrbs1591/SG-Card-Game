@@ -87,7 +87,7 @@ public class Entity : MonoBehaviour
         CameraShake.instance.Shake();
 
 
-        if(health <= 0)
+        if (health <= 0)
         {
             isDie = true;
             return true;

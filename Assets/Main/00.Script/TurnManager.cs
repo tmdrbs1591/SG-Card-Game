@@ -72,7 +72,10 @@ public class TurnManager : MonoBehaviour
 
         isLoading = true;
         if (myTurn)
+        {
             GameManager.instance.Notification("³ªÀÇÅÏ");
+            AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1f, 1f), 1f);
+        }
         yield return delay07;
         OnAddCard?.Invoke(myTurn);
         yield return delay07;
