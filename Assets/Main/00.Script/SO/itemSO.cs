@@ -12,7 +12,7 @@ public class Item
     public Sprite sprite;
     public float percent;
 }
-[CreateAssetMenu(fileName = ("ItemSO"), menuName = "Scriptable Object/ItemSO") ]
+[CreateAssetMenu(fileName = ("ItemSO"), menuName = "Scriptable Object/ItemSO")]
 public class ItemSO : ScriptableObject
 {
     public Item[] items;
